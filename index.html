@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TESLA | Electric Future</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="logo" onclick="goHome()">
+TESLA
+</div>
+
+<nav class="nav-links">
+
+<a href="#" onclick="showPage('home')">
+Home
+</a>
+
+<a href="#" onclick="showPage('vehicles')">
+Vehicles
+</a>
+
+<a href="#" onclick="showPage('stock')">
+Stock
+</a>
+
+<a href="#" onclick="showPage('energy')">
+Energy
+</a>
+
+<a href="#" onclick="showPage('about')">
+About
+</a>
+
+</nav>
+
+<button
+class="menu-button"
+onclick="openMenu()"
+>
+☰
+</button>
+
+</header>
+
+
+<!-- ================= MOBILE MENU ================= -->
+
+<div id="sideMenu" class="side-menu">
+
+<button
+class="close-menu"
+onclick="closeMenu()"
+>
+×
+</button>
+
+<a href="#" onclick="showPage('home'); closeMenu()">
+Home
+</a>
+
+<a href="#" onclick="showPage('vehicles'); closeMenu()">
+Vehicles
+</a>
+
+<a href="#" onclick="showPage('stock'); closeMenu()">
+Stock
+</a>
+
+<a href="#" onclick="showPage('energy'); closeMenu()">
+Energy
+</a>
+
+<a href="#" onclick="showPage('about'); closeMenu()">
+About
+</a>
+
+</div>
+
+
+<!-- ==================================================
+HOME PAGE
+================================================== -->
+
+<main id="homePage" class="page active-page">
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Drive the Future</h1>
+
+<p>
+Electric performance designed
+for the next generation.
+</p>
+
+<div class="hero-buttons">
+
+<button
+class="primary-button"
+onclick="showPage('vehicles')"
+>
+Explore Vehicles
+</button>
+
+<button
+class="secondary-button"
+onclick="showPage('stock')"
+>
+View Stock
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="home-preview">
+
+<h2>
+Electric. Intelligent. Different.
+</h2>
+
+<p>
+Explore our vehicles, energy technology
+and fictional investment demonstration.
+</p>
+
+<div class="preview-buttons">
+
+<button onclick="showPage('vehicles')">
+Explore Vehicles
+</button>
+
+<button onclick="showPage('stock')">
+Stock Dashboard
+</button>
+
+<button onclick="showPage('energy')">
+Energy
+</button>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ==================================================
+VEHICLES PAGE
+================================================== -->
+
+<section
+id="vehiclesPage"
+class="page"
+>
+
+<div class="page-header">
+
+<button
+class="back-button"
+onclick="showPage('home')"
+>
+← Home
+</button>
+
+<h1>Our Vehicles</h1>
+
+<p>
+Explore the TESLA range.
+</p>
+
+</div>
+
+
+<div class="vehicle-showcase">
+
+
+<!-- MODEL S -->
+
+<div class="showcase-card">
+
+<div
+class="showcase-image s-image"
+></div>
+
+<div class="showcase-info">
+
+<span>SEDAN</span>
+
+<h2>MODEL S</h2>
+
+<p>
+A sleek electric performance sedan
+designed for everyday driving.
+</p>
+
+<button
+onclick="showVehicle('s')"
+>
+Explore MODEL S
+</button>
+
+</div>
+
+</div>
+
+
+<!-- MODEL X -->
+
+<div class="showcase-card">
+
+<div
+class="showcase-image x-image"
+></div>
+
+<div class="showcase-info">
+
+<span>SUV</span>
+
+<h2>MODEL X</h2>
+
+<p>
+Spacious electric SUV with advanced
+technology and a premium interior.
+</p>
+
+<button
+onclick="showVehicle('x')"
+>
+Explore MODEL X
+</button>
+
+</div>
+
+</div>
+
+
+<!-- MODEL R -->
+
+<div class="showcase-card">
+
+<div
+class="showcase-image r-image"
+></div>
+
+<div class="showcase-info">
+
+<span>PERFORMANCE</span>
+
+<h2>MODEL R</h2>
+
+<p>
+A performance-focused electric coupe
+built around speed and handling.
+</p>
+
+<button
+onclick="showVehicle('r')"
+>
+Explore MODEL R
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+VEHICLE DETAIL PAGE
+================================================== -->
+
+<section
+id="vehicleDetailPage"
+class="page"
+>
+
+<div class="detail-hero">
+
+<button
+class="back-button light-back"
+onclick="showPage('vehicles')"
+>
+← Vehicles
+</button>
+
+<div class="detail-title">
+
+<span id="vehicleType">
+ELECTRIC VEHICLE
+</span>
+
+<h1 id="vehicleName">
+MODEL S
+</h1>
+
+<p id="vehicleTagline">
+Performance without compromise.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- VEHICLE INFORMATION -->
+
+<div class="vehicle-details">
+
+<div class="detail-text">
+
+<span class="small-heading">
+DESIGN
+</span>
+
+<h2>
+Designed around you.
+</h2>
+
+<p id="vehicleDescription">
+The MODEL S combines minimalist
+design with an advanced electric
+driving experience.
+</p>
+
+</div>
+
+
+<div
+id="interiorImage"
+class="interior-image"
+></div>
+
+</div>
+
+
+<!-- INTERIOR -->
+
+<div class="interior-section">
+
+<div class="interior-photo"></div>
+
+<div class="interior-content">
+
+<span class="small-heading">
+INTERIOR
+</span>
+
+<h2>
+A cabin built around technology.
+</h2>
+
+<p>
+Premium materials, digital controls,
+spacious seating and an intuitive
+interface create a modern cabin.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- SPECS -->
+
+<div class="specs-section">
+
+<h2>
+Vehicle Information
+</h2>
+
+<div class="spec-grid">
+
+<div>
+<strong id="rangeValue">
+400+
+</strong>
+
+<span>
+Estimated range
+</span>
+</div>
+
+<div>
+<strong id="speedValue">
+3.9s
+</strong>
+
+<span>
+0–60 mph demo
+</span>
+</div>
+
+<div>
+<strong id="powerValue">
+AWD
+</strong>
+
+<span>
+Drive system
+</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- INVESTMENT -->
+
+<div class="investment-section">
+
+<div>
+
+<span class="small-heading">
+INVESTMENT DEMONSTRATION
+</span>
+
+<h2>
+Explore the financial model.
+</h2>
+
+<p>
+This section demonstrates how an investment
+interface could be presented. The figures
+below are data that
+represent an security or investment
+opportunity.
+</p>
+
+</div>
+
+
+<div class="investment-card">
+
+<div>
+Allocation
+</div>
+
+<strong>
+$1,000 for 1 shares
+</strong>
+
+<span>
+Example only
+</span>
+
+<button
+onclick="openPurchase()"
+>
+View Checkout
+</button>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+<!-- ==================================================
+STOCK PAGE
+================================================== -->
+
+<section
+id="stockPage"
+class="page"
+>
+
+<div class="page-header">
+
+<button
+class="back-button"
+onclick="showPage('home')"
+>
+← Home
+</button>
+
+<h1>Stock Dashboard</h1>
+
+<p>
+TESLA market demonstration.
+</p>
+
+</div>
+
+
+<div class="stock-dashboard">
+
+<div class="stock-top">
+
+<div>
+
+<span class="stock-label">
+TESLA
+</span>
+
+<h2>
+CHART
+</h2>
+
+</div>
+
+<div class="stock-price">
+$100.00
+</div>
+
+</div>
+
+
+<!-- CHART -->
+
+<div class="chart-container">
+
+<div class="chart-labels">
+
+<span>$120</span>
+<span>$100</span>
+<span>$80</span>
+<span>$60</span>
+
+</div>
+
+<svg
+class="stock-chart"
+viewBox="0 0 800 300"
+preserveAspectRatio="none"
+>
+
+<polyline
+points="
+0,240
+70,215
+140,225
+210,170
+280,190
+350,135
+420,150
+490,105
+560,120
+630,80
+700,95
+800,55
+"
+fill="none"
+stroke="currentColor"
+stroke-width="5"
+/>
+
+</svg>
+
+</div>
+
+
+<div class="chart-note">
+
+TESLA chart — values shown are fictional.
+
+</div>
+
+
+<!-- STOCK CARD -->
+
+<div class="stock-invest-card">
+
+<div>
+
+<span>
+TESLA investment
+</span>
+
+<h2>
+$1,000 for 1 shares
+</h2>
+
+</div>
+
+<button
+onclick="openPurchase()"
+>
+View tesla Checkout
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+ENERGY PAGE
+================================================== -->
+
+<section
+id="energyPage"
+class="page"
+>
+
+<div class="energy-hero">
+
+<button
+class="back-button light-back"
+onclick="showPage('home')"
+>
+← Home
+</button>
+
+<div>
+
+<span>
+TESLA ENERGY
+</span>
+
+<h1>
+Power your world.
+</h1>
+
+<p>
+Explore electric charging and
+energy technology.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="energy-grid">
+
+<div class="energy-card">
+
+<div class="energy-icon">
+⚡
+</div>
+
+<h2>
+Fast Charging
+</h2>
+
+<p>
+A demonstration of a future charging
+network designed for convenient
+electric travel.
+</p>
+
+<button
+onclick="showMessage('Charging locator demo opened.')"
+>
+Find Charging
+</button>
+
+</div>
+
+
+<div class="energy-card">
+
+<div class="energy-icon">
+☀
+</div>
+
+<h2>
+Solar Energy
+</h2>
+
+<p>
+Explore a fictional home-energy
+ecosystem combining solar generation
+and battery storage.
+</p>
+
+<button
+onclick="showMessage('Solar Energy demo opened.')"
+>
+Explore Energy
+</button>
+
+</div>
+
+
+<div class="energy-card">
+
+<div class="energy-icon">
+🔋
+</div>
+
+<h2>
+Energy Storage
+</h2>
+
+<p>
+Store energy and use it when you need
+it with intelligent battery technology.
+</p>
+
+<button
+onclick="showMessage('Energy Storage demo opened.')"
+>
+Learn More
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+ABOUT PAGE
+================================================== -->
+
+<section
+id="aboutPage"
+class="page"
+>
+
+<div class="about-page">
+
+<button
+class="back-button"
+onclick="showPage('home')"
+>
+← Home
+</button>
+
+<h1>
+About TESLA
+</h1>
+
+<p>
+TESLA is a fictional electric mobility
+brand created for this website demonstration.
+</p>
+
+<p>
+The site demonstrates vehicle browsing,
+product details, stock visualization and
+checkout interface design.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+PURCHASE MODAL
+================================================== -->
+
+<div
+id="purchaseModal"
+class="modal"
+>
+
+<div class="modal-box">
+
+<button
+class="modal-close"
+onclick="closePurchase()"
+>
+×
+</button>
+
+<h2>
+TESLA Checkout
+</h2>
+
+<p>
+Demonstration amount
+</p>
+
+<div class="checkout-amount">
+$1,000 for 1 shares
+</div>
+
+
+<h3>
+Select Payment Method
+</h3>
+
+
+<div class="payment-options">
+
+
+<button
+class="payment-option"
+onclick="selectPayment('bitcoin')"
+>
+
+<span class="payment-icon">
+₿
+</span>
+
+<span>
+<strong>Bitcoin</strong>
+
+<small>
+BTC
+</small>
+</span>
+
+</button>
+
+
+<button
+class="payment-option"
+onclick="selectPayment('wire')"
+>
+
+<span class="payment-icon">
+🏦
+</span>
+
+<span>
+<strong>Wire Transfer</strong>
+
+<small>
+Bank transfer
+</small>
+</span>
+
+</button>
+
+</div>
+
+
+<div
+id="bitcoinPayment"
+class="bc1q3u0jnyymc84axq7f2037eme0ugrr243q5hmtuw
+"
+>
+
+<h3>
+Bitcoin
+</h3>
+
+<p>
+bc1q3u0jnyymc84axq7f2037eme0ugrr243q5hmtuw .
+</p>
+
+<div class="-notice">
+Checkout only.
+</div>
+
+</div>
+
+
+<div
+id="wirePayment"
+class="Contact mail TESLAINVESTMENT30@outlook.com"
+>
+
+<h3>
+Wire Transfer
+</h3>
+
+<p>
+Contact mail  TESLAINVESTMENT30@outlook.com
+</p>
+
+<div class="tesla-notice">
+ Checkout only.
+</div>
+
+</div>
+
+
+<button
+class="continue-button"
+onclick="continueCheckout()"
+>
+Continue
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div>
+TESlA
+</div>
+
+<p>
+© 2026 TESLA Motors
+</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

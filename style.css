@@ -1,0 +1,1097 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: #fff;
+color: #171717;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+position: fixed;
+top: 0;
+left: 0;
+
+width: 100%;
+height: 70px;
+
+z-index: 1000;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 0 40px;
+
+color: white;
+
+background: rgba(0,0,0,.35);
+backdrop-filter: blur(12px);
+}
+
+.logo {
+font-size: 22px;
+font-weight: bold;
+letter-spacing: 5px;
+cursor: pointer;
+}
+
+.nav-links {
+display: flex;
+gap: 30px;
+}
+
+.nav-links a {
+color: white;
+text-decoration: none;
+font-size: 14px;
+font-weight: 600;
+}
+
+.menu-button {
+border: none;
+background: white;
+color: black;
+
+padding: 10px 14px;
+
+border-radius: 5px;
+
+cursor: pointer;
+}
+
+
+/* ================= PAGES ================= */
+
+.page {
+display: none;
+}
+
+.active-page {
+display: block;
+}
+
+
+/* ================= MOBILE MENU ================= */
+
+.side-menu {
+position: fixed;
+
+top: 0;
+right: -360px;
+
+width: 360px;
+height: 100vh;
+
+z-index: 2500;
+
+background: white;
+
+padding: 90px 35px;
+
+transition: .35s;
+}
+
+.side-menu.active {
+right: 0;
+}
+
+.side-menu a {
+display: block;
+
+color: black;
+
+text-decoration: none;
+
+font-size: 21px;
+
+margin-bottom: 25px;
+}
+
+.close-menu {
+position: absolute;
+
+top: 20px;
+right: 25px;
+
+border: none;
+background: none;
+
+font-size: 35px;
+
+cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+min-height: 100vh;
+
+display: flex;
+align-items: flex-end;
+justify-content: center;
+
+text-align: center;
+
+color: white;
+
+padding: 0 20px 90px;
+
+background:
+linear-gradient(
+rgba(0,0,0,.25),
+rgba(0,0,0,.6)
+),
+url("https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=2000&q=80");
+
+background-size: cover;
+background-position: center;
+}
+
+.hero h1 {
+font-size: clamp(45px,7vw,80px);
+font-weight: 500;
+}
+
+.hero p {
+font-size: 18px;
+margin: 15px 0 30px;
+}
+
+.hero-buttons {
+display: flex;
+justify-content: center;
+gap: 12px;
+}
+
+.hero-buttons button {
+width: 210px;
+padding: 15px;
+
+border: none;
+border-radius: 5px;
+
+font-weight: bold;
+
+cursor: pointer;
+}
+
+.primary-button {
+background: white;
+color: black;
+}
+
+.secondary-button {
+background: rgba(0,0,0,.8);
+color: white;
+}
+
+
+/* ================= HOME PREVIEW ================= */
+
+.home-preview {
+padding: 100px 25px;
+text-align: center;
+}
+
+.home-preview h2 {
+font-size: 45px;
+font-weight: 500;
+}
+
+.home-preview p {
+color: #666;
+margin: 15px auto 30px;
+}
+
+.preview-buttons {
+display: flex;
+justify-content: center;
+gap: 12px;
+flex-wrap: wrap;
+}
+
+.preview-buttons button {
+padding: 14px 25px;
+
+border: none;
+background: black;
+color: white;
+
+border-radius: 5px;
+
+cursor: pointer;
+}
+
+
+/* ================= PAGE HEADER ================= */
+
+.page-header {
+padding: 130px 30px 60px;
+text-align: center;
+}
+
+.page-header h1 {
+font-size: 55px;
+font-weight: 500;
+}
+
+.page-header p {
+color: #666;
+margin-top: 10px;
+}
+
+.back-button {
+border: none;
+
+background: #eee;
+
+padding: 12px 20px;
+
+border-radius: 5px;
+
+cursor: pointer;
+
+margin-bottom: 30px;
+}
+
+
+/* ================= VEHICLE SHOWCASE ================= */
+
+.vehicle-showcase {
+padding: 20px 30px 100px;
+
+display: grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap: 25px;
+}
+
+.showcase-card {
+background: #f4f4f4;
+border-radius: 8px;
+overflow: hidden;
+}
+
+.showcase-image {
+height: 400px;
+
+background-size: cover;
+background-position: center;
+}
+
+.s-image {
+background-image:
+url("https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1200&q=80");
+}
+
+.x-image {
+background-image:
+url("https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1200&q=80");
+}
+
+.r-image {
+background-image:
+url("https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80");
+}
+
+.showcase-info {
+padding: 30px;
+}
+
+.showcase-info span {
+font-size: 11px;
+letter-spacing: 2px;
+color: #777;
+}
+
+.showcase-info h2 {
+font-size: 32px;
+margin: 8px 0;
+}
+
+.showcase-info p {
+color: #666;
+line-height: 1.6;
+margin-bottom: 20px;
+}
+
+.showcase-info button {
+padding: 13px 20px;
+
+border: none;
+
+background: black;
+
+color: white;
+
+border-radius: 5px;
+
+cursor: pointer;
+}
+
+
+/* ================= VEHICLE DETAIL ================= */
+
+.detail-hero {
+min-height: 650px;
+
+display: flex;
+flex-direction: column;
+
+justify-content: space-between;
+
+padding: 110px 50px 80px;
+
+color: white;
+
+background:
+linear-gradient(
+rgba(0,0,0,.15),
+rgba(0,0,0,.65)
+),
+url("https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=2000&q=80");
+
+background-size: cover;
+background-position: center;
+}
+
+.light-back {
+background: rgba(255,255,255,.9);
+}
+
+.detail-title span {
+font-size: 12px;
+letter-spacing: 3px;
+}
+
+.detail-title h1 {
+font-size: 70px;
+font-weight: 500;
+margin: 10px 0;
+}
+
+.detail-title p {
+font-size: 20px;
+}
+
+
+/* ================= VEHICLE DETAILS ================= */
+
+.vehicle-details {
+display: grid;
+
+grid-template-columns: 1fr 1fr;
+
+min-height: 600px;
+}
+
+.detail-text {
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+padding: 70px;
+}
+
+.small-heading {
+font-size: 11px;
+letter-spacing: 3px;
+color: #777;
+}
+
+.detail-text h2 {
+font-size: 45px;
+font-weight: 500;
+margin: 15px 0;
+}
+
+.detail-text p {
+max-width: 500px;
+line-height: 1.8;
+color: #555;
+}
+
+.interior-image {
+background:
+url("https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80");
+
+background-size: cover;
+background-position: center;
+}
+
+
+/* ================= INTERIOR ================= */
+
+.interior-section {
+display: grid;
+
+grid-template-columns: 1fr 1fr;
+
+min-height: 600px;
+
+background: #111;
+
+color: white;
+}
+
+.interior-photo {
+background:
+url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1200&q=80");
+
+background-size: cover;
+background-position: center;
+}
+
+.interior-content {
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+padding: 70px;
+}
+
+.interior-content h2 {
+font-size: 45px;
+font-weight: 500;
+margin: 15px 0;
+}
+
+.interior-content p {
+color: #ccc;
+line-height: 1.8;
+max-width: 500px;
+}
+
+
+/* ================= SPECS ================= */
+
+.specs-section {
+padding: 100px 30px;
+text-align: center;
+}
+
+.specs-section h2 {
+font-size: 40px;
+font-weight: 500;
+margin-bottom: 50px;
+}
+
+.spec-grid {
+max-width: 900px;
+margin: auto;
+
+display: grid;
+grid-template-columns:
+repeat(3,1fr);
+
+gap: 30px;
+}
+
+.spec-grid div {
+padding: 30px;
+background: #f5f5f5;
+border-radius: 8px;
+}
+
+.spec-grid strong {
+display: block;
+
+font-size: 35px;
+
+margin-bottom: 10px;
+}
+
+.spec-grid span {
+color: #777;
+}
+
+
+/* ================= INVESTMENT ================= */
+
+.investment-section {
+padding: 100px 50px;
+
+background: #f5f5f5;
+
+display: grid;
+
+grid-template-columns: 1fr 350px;
+
+gap: 60px;
+
+align-items: center;
+}
+
+.investment-section h2 {
+font-size: 45px;
+font-weight: 500;
+margin: 15px 0;
+}
+
+.investment-section p {
+max-width: 650px;
+color: #555;
+line-height: 1.7;
+}
+
+.investment-card {
+background: white;
+
+padding: 30px;
+
+border-radius: 10px;
+
+box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.investment-card strong {
+display: block;
+
+font-size: 35px;
+
+margin: 15px 0;
+}
+
+.investment-card span {
+color: #777;
+}
+
+.investment-card button {
+width: 100%;
+
+margin-top: 20px;
+
+padding: 14px;
+
+background: black;
+
+color: white;
+
+border: none;
+
+border-radius: 5px;
+
+cursor: pointer;
+}
+
+
+/* ================= STOCK ================= */
+
+.stock-dashboard {
+max-width: 1000px;
+
+margin: auto;
+
+padding: 0 25px 100px;
+}
+
+.stock-top {
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+padding: 30px;
+
+background: #f5f5f5;
+
+border-radius: 10px 10px 0 0;
+}
+
+.stock-label {
+font-size: 11px;
+
+letter-spacing: 3px;
+
+color: #777;
+}
+
+.stock-top h2 {
+font-size: 35px;
+
+margin-top: 5px;
+}
+
+.stock-demo-price {
+font-size: 35px;
+
+font-weight: bold;
+}
+
+.chart-container {
+height: 350px;
+
+display: flex;
+
+align-items: stretch;
+
+padding: 30px;
+
+background: white;
+
+border: 1px solid #eee;
+}
+
+.chart-labels {
+width: 50px;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: space-between;
+
+color: #999;
+
+font-size: 12px;
+}
+
+.stock-chart {
+width: 100%;
+
+height: 100%;
+
+color: #111;
+}
+
+.chart-note {
+padding: 15px;
+
+text-align: center;
+
+color: #888;
+
+font-size: 13px;
+}
+
+.stock-invest-card {
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+padding: 30px;
+
+margin-top: 25px;
+
+background: #f5f5f5;
+
+border-radius: 10px;
+}
+
+.stock-invest-card h2 {
+font-size: 35px;
+
+margin-top: 8px;
+}
+
+.stock-invest-card button {
+padding: 14px 25px;
+
+background: black;
+
+color: white;
+
+border: none;
+
+border-radius: 5px;
+
+cursor: pointer;
+}
+
+
+/* ================= ENERGY ================= */
+
+.energy-hero {
+min-height: 650px;
+
+padding: 110px 50px 80px;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: space-between;
+
+color: white;
+
+background:
+linear-gradient(
+rgba(0,0,0,.25),
+rgba(0,0,0,.65)
+),
+url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2000&q=80");
+
+background-size: cover;
+
+background-position: center;
+}
+
+.energy-hero span {
+letter-spacing: 3px;
+
+font-size: 12px;
+}
+
+.energy-hero h1 {
+font-size: 65px;
+
+font-weight: 500;
+
+margin: 10px 0;
+}
+
+.energy-hero p {
+font-size: 20px;
+}
+
+.energy-grid {
+padding: 100px 30px;
+
+display: grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap: 25px;
+}
+
+.energy-card {
+padding: 40px;
+
+background: #f5f5f5;
+
+border-radius: 8px;
+}
+
+.energy-icon {
+font-size: 40px;
+
+margin-bottom: 20px;
+}
+
+.energy-card h2 {
+font-size: 30px;
+
+font-weight: 500;
+
+margin-bottom: 15px;
+}
+
+.energy-card p {
+color: #666;
+
+line-height: 1.7;
+
+margin-bottom: 25px;
+}
+
+.energy-card button {
+padding: 13px 20px;
+
+border: none;
+
+background: black;
+
+color: white;
+
+border-radius: 5px;
+
+cursor: pointer;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-page {
+min-height: 80vh;
+
+padding: 130px 30px;
+
+max-width: 850px;
+
+margin: auto;
+}
+
+.about-page h1 {
+font-size: 60px;
+
+font-weight: 500;
+
+margin-bottom: 30px;
+}
+
+.about-page p {
+color: #555;
+
+line-height: 1.8;
+
+margin-bottom: 20px;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+display: none;
+
+position: fixed;
+
+inset: 0;
+
+z-index: 4000;
+
+align-items: center;
+
+justify-content: center;
+
+padding: 20px;
+
+background: rgba(0,0,0,.75);
+}
+
+.modal.active {
+display: flex;
+}
+
+.modal-box {
+position: relative;
+
+width: 100%;
+
+max-width: 500px;
+
+padding: 35px;
+
+background: white;
+
+border-radius: 10px;
+}
+
+.modal-close {
+position: absolute;
+
+top: 15px;
+
+right: 20px;
+
+border: none;
+
+background: none;
+
+font-size: 30px;
+
+cursor: pointer;
+}
+
+.checkout-amount {
+font-size: 35px;
+
+font-weight: bold;
+
+margin: 20px 0 30px;
+}
+
+.payment-options {
+display: grid;
+
+gap: 12px;
+
+margin-top: 15px;
+}
+
+.payment-option {
+display: flex;
+
+align-items: center;
+
+gap: 15px;
+
+width: 100%;
+
+padding: 17px;
+
+border: 1px solid #ccc;
+
+background: white;
+
+border-radius: 7px;
+
+text-align: left;
+
+cursor: pointer;
+}
+
+.payment-option:hover {
+background: #f5f5f5;
+}
+
+.payment-icon {
+font-size: 25px;
+}
+
+.payment-option small {
+display: block;
+
+color: #777;
+
+margin-top: 4px;
+}
+
+.payment-details {
+display: none;
+
+padding: 20px;
+
+margin-top: 20px;
+
+background: #f5f5f5;
+
+border-radius: 7px;
+}
+
+.payment-details.active {
+display: block;
+}
+
+.payment-details p {
+color: #555;
+
+line-height: 1.6;
+
+margin-top: 10px;
+}
+
+.demo-notice {
+margin-top: 15px;
+
+padding: 12px;
+
+background: #fff3cd;
+
+color: #664d03;
+
+border-radius: 5px;
+
+font-size: 13px;
+}
+
+.continue-button {
+width: 100%;
+
+padding: 15px;
+
+margin-top: 20px;
+
+border: none;
+
+background: black;
+
+color: white;
+
+border-radius: 5px;
+
+cursor: pointer;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+padding: 35px;
+
+text-align: center;
+
+background: #111;
+
+color: white;
+}
+
+footer div {
+font-weight: bold;
+
+letter-spacing: 4px;
+
+margin-bottom: 10px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px) {
+
+.navbar {
+padding: 0 20px;
+}
+
+.nav-links {
+display: none;
+}
+
+.vehicle-showcase,
+.energy-grid {
+grid-template-columns: 1fr;
+}
+
+.vehicle-details,
+.interior-section {
+grid-template-columns: 1fr;
+}
+
+.interior-image,
+.interior-photo {
+min-height: 450px;
+}
+
+.spec-grid {
+grid-template-columns: 1fr;
+}
+
+.investment-section {
+grid-template-columns: 1fr;
+padding: 70px 30px;
+}
+
+.stock-invest-card {
+flex-direction: column;
+
+align-items: flex-start;
+
+gap: 25px;
+}
+
+.detail-title h1 {
+font-size: 50px;
+}
+
+.energy-hero h1 {
+font-size: 45px;
+}
+
+.detail-text,
+.interior-content {
+padding: 50px 30px;
+}
+
+.side-menu {
+width: 100%;
+right: -100%;
+}
+
+}
